@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>One Health | Communication</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css"> 
+
+</head>
+
+<body>
+
+    <div class="app"> 
+
+        <aside class="sidebar">
+
+            <div class="brand"><i class="fa-solid fa-shield-halved"></i> <span>InxoraX - One Health</span></div>
+
+            <div>Dr. Aris<br><small style="color:#9fb0c0">Forest Dept.</small></div>
+
+            <div class="nav">
+
+                <a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+
+                <a href="simulation.html"><i class="fa-solid fa-play"></i> Simulation</a>
+
+                <a href="communication.html" class="active"><i class="fa-solid fa-message"></i> Communication</a>
+
+                <a href="reports.html"><i class="fa-solid fa-file-lines"></i> Reports</a>
+
+                <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+
+            </div>
+
+        </aside>
+
+        <main class="main">
+
+            <header>Communication Hub</header>
+
+            <div class="team-selection-container">
+
+                <div class="team-card clickable" data-team="ranger">
+                    
+                    <i class="fa-solid fa-person-rifle"></i>
+
+                    <h4>Ranger Team</h4>
+
+                    <p>Wildlife & Environmental<br><h5>Emergency Contact : 112</h5></p>
+                    
+                </div>
+
+                <div class="team-card clickable" data-team="firefighter">
+
+                    <i class="fa-solid fa-fire-extinguisher"></i>
+
+                    <h4>Fire Response</h4>
+
+                    <p>Emergency & Wildfire<br><h5>Emergency Contact : 1800 425 4586</h5></p>
+
+                </div>
+
+                <div class="team-card clickable" data-team="veterinarian">
+
+                    <i class="fa-solid fa-paw"></i>
+
+                    <h4>Veterinary Unit</h4>
+
+                    <p>Animal Health Surveillance<br><h5>Emergency Contact : 1962</h5></p>
+
+                </div>
+
+                <div class="team-card clickable" data-team="medical-assistant">
+
+                    <i class="fa-solid fa-user-doctor"></i>
+
+                    <h4>Medical Assistant</h4>
+
+                    <p>Public Health Response<br><h5>Emergency Contact : 108</h5></p>
+
+                </div>
+
+            </div>
+            
+            <div class="external-action-button">
+                <a href="https://rathinaminnovation.com/RTC/rescue/dashboard.html" class="rescue-dashboard-btn" target="_blank" title="Go to Rescue Dashboard">
+                    <i class="fa-solid fa-truck-medical"></i> Go to Rescue Dashboard
+                </a>
+            </div> 
+            <div class="chat-container">
+                <div class="chat-box" id="chatBox">
+                    <div class="msg-wrapper bot">
+                        <div class="msg">Hello👋 — I’m your One Health Assistant. I'm monitoring all systems. How may I assist you with the environmental or health data today?</div>
+                        <span class="msg-info"><span class="timestamp"></span></span>
+                    </div>
+                </div>
+                <div class="input-area">
+                    <div class="input-bar">
+                        <input type="text" id="userInput" placeholder="Type a message or click a quick action...">
+                        <button id="sendBtn" title="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                    <div class="quick-actions">
+                        <button data-action="alerts"><i class="fa-solid fa-bell"></i> Latest Alerts</button>
+                        <button data-action="drone-status"><i class="fa-solid fa-drone"></i> Drone Status</button>
+                        <button data-action="sim-help"><i class="fa-solid fa-flask"></i> Simulation Help</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div> 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const teamCards = document.querySelectorAll('.team-card');
+            
+            teamCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    // Get the team name from the data-team attribute
+                    const team = card.getAttribute('data-team');
+                    // Redirect to the corresponding HTML page
+                    window.location.href = `${team}.html`;
+                });
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
