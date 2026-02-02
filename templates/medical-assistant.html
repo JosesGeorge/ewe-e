@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Health | Medical Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+</head>
+
+<body>
+    <div class="app"> 
+        <aside class="sidebar">
+            <div class="brand"><i class="fa-solid fa-shield-halved"></i> <span>InxoraX - One Health</span></div>
+            <div>Dr. Aris<br><small style="color:var(--muted)">Forest Dept.</small></div>
+            <div class="nav">
+                <a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="simulation.html"><i class="fa-solid fa-play"></i> Simulation</a>
+                <a href="communication.html" class="active"><i class="fa-solid fa-message"></i> Communication</a>
+                <a href="reports.html"><i class="fa-solid fa-file-lines"></i> Reports</a>
+                <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header>Medical Services Hub - Human Health & Triage</header>
+            
+            <div class="content-container">
+
+                <h1 style="text-align: center; color: var(--primary);">
+                    <i class="fa-solid fa-heart-pulse"></i> Medical Services Unit
+                </h1>
+                
+                <div class="note" style="border-color: var(--primary);">
+                    Coordinate **Emergency Medical Services (EMS)**, manage triage protocols, and monitor human health outbreaks. (Emergency: 911 / Local: 211)
+                </div>
+
+                <hr>
+
+                <h2>📋 Key Responsibilities</h2>
+                <div class="section-info">
+                    <ul>
+                        <li><strong>Triage & Field Stabilization:</strong> Rapid assessment and stabilization of casualties at incident sites.</li>
+                        <li><strong>Evacuation Coordination:</strong> Managing helicopter and ground transport logistics for severe cases.</li>
+                        <li><strong>Disease Monitoring:</strong> Tracking and isolating human cases related to zoonotic and environmental factors.</li>
+                        <li><strong>Supply Management:</strong> Ensuring adequate medical supplies are deployed to remote units.</li>
+                    </ul>
+                </div>
+
+                <hr>
+                
+                <h2>📊 Current Incident Status</h2>
+                <p>Medical teams are currently deployed to monitor human health at three high-risk locations following the recent environmental alert.</p>
+
+                <div class="section-info">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Location</th>
+                                <th>Active Incidents</th>
+                                <th>Triage Level</th>
+                                <th>Personnel Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sector Alpha Base</td>
+                                <td>0</td>
+                                <td>Green</td>
+                                <td>Full Capacity</td>
+                            </tr>
+                            <tr>
+                                <td>Gamma Flood Zone</td>
+                                <td>1 (Waterborne)</td>
+                                <td>Yellow</td>
+                                <td>Overstretched (Requesting support)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div> 
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

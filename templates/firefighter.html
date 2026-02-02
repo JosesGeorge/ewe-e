@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Health | Fire & Rescue</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+</head>
+
+<body>
+    <div class="app"> 
+        <aside class="sidebar">
+            <div class="brand"><i class="fa-solid fa-shield-halved"></i> <span>InxoraX - One Health</span></div>
+            <div>Dr. Aris<br><small style="color:var(--muted)">Forest Dept.</small></div>
+            <div class="nav">
+                <a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="simulation.html"><i class="fa-solid fa-play"></i> Simulation</a>
+                <a href="communication.html" class="active"><i class="fa-solid fa-message"></i> Communication</a>
+                <a href="reports.html"><i class="fa-solid fa-file-lines"></i> Reports</a>
+                <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header>Fire & Rescue Hub - Incident Management</header>
+            
+            <div class="content-container">
+
+                <h1 style="text-align: center; color: var(--danger);">
+                    <i class="fa-solid fa-fire-extinguisher"></i> Fire & Rescue Unit
+                </h1>
+                
+                <div class="note" style="border-color: var(--danger);">
+                    Coordinate all fire suppression, containment, and rescue operations. **Wildfire Status: HIGH** (Emergency: 911 / Dispatch: 411).
+                </div>
+
+                <hr>
+
+                <h2>📋 Key Responsibilities</h2>
+                <div class="section-info">
+                    <ul>
+                        <li><strong>Wildfire Containment:</strong> Establishing fire breaks and conducting controlled burns.</li>
+                        <li><strong>Structural Response:</strong> Managing resources for structure fires within the protected zone.</li>
+                        <li><strong>Hazardous Materials (HAZMAT):</strong> Identifying and mitigating environmental hazards.</li>
+                        <li><strong>Resource Allocation:</strong> Tracking water, air support, and personnel deployment status.</li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <h2>🔥 Incident and Resource Log</h2>
+                <p>Detailed log of current wildfires, resource depletion, and operational assignments.</p>
+
+                <div class="section-info">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Incident ID</th>
+                                <th>Type</th>
+                                <th>Containment %</th>
+                                <th>Resources Deployed</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>WF-009</td>
+                                <td>Wildland</td>
+                                <td>85%</td>
+                                <td>3 Ground Teams, 1 Air Support</td>
+                            </tr>
+                            <tr>
+                                <td>STR-12</td>
+                                <td>Structure</td>
+                                <td>100%</td>
+                                <td>2 Engines, HAZMAT Clear</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </main>
+    </div> 
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
